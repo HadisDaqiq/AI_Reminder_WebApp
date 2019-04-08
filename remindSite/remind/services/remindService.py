@@ -1,7 +1,7 @@
 import random
 import string
 
-import remind.services.locationService
+import remindSite.remind.services.locationService
 
 uncheckedDic = {}
 checkedDic = {}
@@ -40,7 +40,7 @@ def check(key):
         del uncheckedDic[key] #delete the checked reminder from the unchecked Dic.
 
         #print(l.locate())  #location address
-        checkedDic["address"] = remind.services.locationService.locate()
+        checkedDic["address"] = remindSite.remind.services.locationService.locate()
         print(checkedDic)
         print("checked list^")
         #print(self.uncheckedDic)

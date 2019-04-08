@@ -1,7 +1,7 @@
-import remind.services.remindService
+import remindSite.remind.services.remindService
 
 if __name__ == '__main__':
-    my_reminder = remind.services.remindService
+    my_reminder = remindSite.remind.services.remindService
 
     while True:
         action = input("[A]dd Reminder, [C]heck Reminder")
