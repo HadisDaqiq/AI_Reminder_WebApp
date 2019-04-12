@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="5df23a97-1d1d-40fd-87d2-a5272619344e">
-        <schema name="main" object-types="constraint, view, column, dataset trigger, table, index" />
+        <schema name="main" object-types="constraint, index, table, view, dataset trigger, column" />
       </connection>
     </loaded-nodes>
   </component>
@@ -33,12 +33,7 @@
     <connection id="5df23a97-1d1d-40fd-87d2-a5272619344e">
       <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from remind_location
 
-insert into remind_reminder values(null,"hpick me",current_date,1)
-
-select * from remind_reminder
-delete from remind_reminder
-delete from remind_location
-commit]]></console>
+select * from remind_reminder]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
