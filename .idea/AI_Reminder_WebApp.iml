@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/remindSite/remind" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remindSite/remind/services" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remindSite" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remindSite/remindSite" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remindSite/remind/migrations" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remindSite/remind/templates" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remindSite/remind/templates/remind" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

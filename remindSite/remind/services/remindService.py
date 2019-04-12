@@ -1,7 +1,9 @@
 import random
 import string
+from datetime import timezone
 
-import remindSite.remind.services.locationService
+import locationService
+from remind.models import Location
 
 uncheckedDic = {}
 checkedDic = {}
@@ -9,23 +11,22 @@ ide=""
 
 def __init__(descrip =""):
     descrip = descrip
-   #self.check = check
-
 
 
 def createReminder(description="ss"):
     ide = generateId()
-    #self.ide is referring to ide self.gener refers to its class.
+   # side is referring to ide self.gener refers to its class.
     uncheckedDic[ide] = description
     #save data into database/tables.
-
-    print("this is a saved")
 
 def generateId(size=6, chars=string.ascii_uppercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
 
 def location():
     uncheckedDic
+    # l=Location(street="test1", lat=33, lng=81)
+    # l.save()
+
     print("location associated")
     #save the reminder in a list...
     #if it becomes check
@@ -40,7 +41,7 @@ def check(key):
         del uncheckedDic[key] #delete the checked reminder from the unchecked Dic.
 
         #print(l.locate())  #location address
-        checkedDic["address"] = remindSite.remind.services.locationService.locate()
+        checkedDic["address"] = locationService.locate()
         print(checkedDic)
         print("checked list^")
         #print(self.uncheckedDic)

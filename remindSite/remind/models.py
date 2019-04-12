@@ -9,7 +9,7 @@ class Location(models.Model):
 class Reminder(models.Model):
     reminder_text = models.CharField(max_length=200)
     reminder_date = models.DateTimeField('date')
-    reminder_location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    reminder_location = models.ForeignKey(Location, on_delete=models.CASCADE, blank=True, null=True)
 
 
 

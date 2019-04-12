@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+<div>
+<h1>Reminder List</h1>
+    <button id ="addBtn">+</button>
+</div>
+
+
+<div class="modal" id="addReminderModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Reminder</h5>
+        <button type="button" id="xCloseBtn" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="add_reminder" method="get">
+        <input type="text" class="form-control" style="height:50px" name="reminderDescription" placeholder="Reminder description" rows="3" required><br>
+        <input type="submit" name="addReminder" style="width:100%" class="btn btn-primary" value="Add"></input>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul id="reminderList">
+{% for reminder in object_list %}
+    <li>{{ reminder.reminder_text }}  <input type="checkbox"></li>
+{% empty %}
+    <li>No reminder yet.</li>
+{% endfor %}
+</ul>
+<input type="submit"  style="width:100%" id="subBtn" class="btn btn-primary" value="Submit"></input>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+<script type="text/javascript">
+$( "#xCloseBtn" ).click(function() {
+$('#addReminderModal').hide()
+}
+);
+
+$( "#addBtn" ).click(function() {
+$('#addReminderModal').show()
+
+});
+
+$( "#subBtn").click(function() {
+if(this.checked){
+$('#reminderList').show()
+}
+});
+</script>

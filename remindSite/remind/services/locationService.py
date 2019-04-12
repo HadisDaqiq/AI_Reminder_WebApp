@@ -16,6 +16,3 @@ def locate():
     street = street_number+" "+route
    # print(street)
     return street
-
-
-
