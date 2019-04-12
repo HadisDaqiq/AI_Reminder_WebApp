@@ -37,6 +37,7 @@ insert into remind_reminder values(null,"hpick me",current_date,1)
 
 select * from remind_reminder
 delete from remind_reminder
+delete from remind_location
 commit]]></console>
     </connection>
   </component>

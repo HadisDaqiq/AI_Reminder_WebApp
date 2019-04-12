@@ -3,7 +3,7 @@ from datetime import datetime
 
 def locate():
     gmaps = googlemaps.Client(key='AIzaSyDPJEEdKJVSf-ODYxwAiWVdoYZU9yhPppk')
-
+    location = []
     loc = gmaps.geolocate()
     lat = loc['location']['lat']
     lng = loc['location']['lng']
@@ -15,4 +15,8 @@ def locate():
 
     street = street_number+" "+route
    # print(street)
-    return street
+    location.append(street)
+    location.append(lat)
+    location.append(lng)
+    print(location)
+    return location
