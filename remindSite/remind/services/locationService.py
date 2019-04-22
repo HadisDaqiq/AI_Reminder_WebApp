@@ -1,6 +1,7 @@
 import googlemaps
 from datetime import datetime
 
+#locate takes current location of the user through GoogleMaps API by getting latitude and longitude.
 def locate():
     gmaps = googlemaps.Client(key='AIzaSyDPJEEdKJVSf-ODYxwAiWVdoYZU9yhPppk')
     location = []

@@ -12,25 +12,20 @@ ide=""
 def __init__(descrip =""):
     descrip = descrip
 
-
+#createReminder creates reminder with description based on user's request.
 def createReminder(description="ss"):
     ide = generateId()
-   # side is referring to ide self.gener refers to its class.
     uncheckedDic[ide] = description
-    #save data into database/tables.
 
+#generates random Id for testing reminders.
 def generateId(size=6, chars=string.ascii_uppercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
 
+#location association for testing on console.
 def location():
     uncheckedDic
-    # l=Location(street="test1", lat=33, lng=81)
-    # l.save()
-
     print("location associated")
-    #save the reminder in a list...
-    #if it becomes check
-
+    #if it becomes check return location is associated.
     if ide in uncheckedDic:
         print("location is saved")
 

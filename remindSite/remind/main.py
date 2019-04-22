@@ -4,6 +4,7 @@ import os
 if __name__ == '__main__':
     my_reminder = remindService
 
+    #console interface for testing
     while True:
         action = input("[A]dd Reminder, [C]heck Reminder")
 
