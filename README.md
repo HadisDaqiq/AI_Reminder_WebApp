@@ -1,4 +1,4 @@
-# AI_Reminder_WebApp
+# AI_Reminder_WebApp Version 1.0 2019/3/26
 This is a web app using Python and Django for the back end. 
 This project started with an idea to develop a smart reminder application where the user is automatically reminded 
 of tasks she needs to complete based on her location. The application tracks the user’s location and learns 
